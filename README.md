@@ -1,2 +1,2 @@
 # Navigation-Compose
- The simplest way to implement "Navigating with Compose"
+ The simplest way to implement Navigation and Jetpack Compose

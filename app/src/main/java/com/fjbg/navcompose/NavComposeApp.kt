@@ -21,15 +21,18 @@ fun navComposeApp() {
     val navController = rememberNavController()
     val actions = remember(navController) { Action(navController) }
     NavComposeTheme {
-        NavHost(navController = navController, startDestination = Home) {
+        NavHost(
+            navController = navController,
+            startDestination = Home
+        ) {
             composable(Home) {
-                home()
+                home(action = actions.view1)
             }
             composable(View1) {
-                view1()
+                view1(action = actions.view2)
             }
             composable(View2) {
-                view2()
+                view2(action = actions.view3)
             }
             composable(View3) {
                 view3()
