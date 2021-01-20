@@ -9,4 +9,3 @@ fun view2(action: () -> Unit) {
         action = action
     )
 }
-

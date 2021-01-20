@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.ui.tooling.preview.Preview
 import com.fjbg.navcompose.ui.purple500
 
 @Composable
@@ -55,12 +54,6 @@ fun common(
             }
         }
     )
-}
-
-@Preview
-@Composable
-fun commonPreview() {
-    common("Hello") {}
 }
 
 @Composable
