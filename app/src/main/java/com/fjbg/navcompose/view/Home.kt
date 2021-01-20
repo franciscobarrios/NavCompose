@@ -9,4 +9,3 @@ fun home(action: () -> Unit) {
         action = action
     )
 }
-

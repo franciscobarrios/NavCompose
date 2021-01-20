@@ -4,5 +4,7 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun view3() {
-    common("this is the last view, now is time to go back") {}
+    common(
+        text = "this is the last view, now is time to go back"
+    ) {}
 }

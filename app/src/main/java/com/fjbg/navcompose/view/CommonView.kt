@@ -60,7 +60,7 @@ fun common(
 @Preview
 @Composable
 fun commonPreview() {
-    common("topBarr", {})
+    common("Hello") {}
 }
 
 @Composable
