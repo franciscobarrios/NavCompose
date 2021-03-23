@@ -1,5 +1,6 @@
 package com.fjbg.navcompose
 
+import androidx.compose.animation.Crossfade
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
@@ -20,15 +21,19 @@ import com.fjbg.navcompose.view.view3
 fun navComposeApp() {
     val navController = rememberNavController()
     val actions = remember(navController) { Action(navController) }
+    val currentScreen = remember { Int }
     NavComposeTheme {
         NavHost(
             navController = navController,
             startDestination = Home
         ) {
-            composable(Home) { home(action = actions.view1) }
-            composable(View1) { view1(action = actions.view2) }
-            composable(View2) { view2(action = actions.view3) }
-            composable(View3) { view3() }
+            Crossfade(current = currentScreen) {
+
+                composable(Home) { home(action = actions.view1) }
+                composable(View1) { view1(action = actions.view2) }
+                composable(View2) { view2(action = actions.view3) }
+                composable(View3) { view3() }
+            }
         }
     }
 }
